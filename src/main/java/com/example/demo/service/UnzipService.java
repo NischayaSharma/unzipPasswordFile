@@ -5,7 +5,7 @@ import net.lingala.zip4j.core.ZipFile;
 
 @Service
 public class UnzipService {
-    public String unzip(String sourcePath) throws ZipException {
+    public String unzip(String sourcePath) {
         String destPath = getFileName(sourcePath);
         System.out.println("\n\n\n*****************************Destination " + destPath);
         ZipFile zipFile = new ZipFile(sourcePath);
