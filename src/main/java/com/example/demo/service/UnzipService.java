@@ -1,11 +1,13 @@
 package com.example.demo.service;
 
 import org.springframework.stereotype.Service;
+
 import net.lingala.zip4j.core.ZipFile;
+import net.lingala.zip4j.exception.ZipException;
 
 @Service
 public class UnzipService {
-    public String unzip(String sourcePath) {
+    public String unzip(String sourcePath) throws ZipException {
         String destPath = getFileName(sourcePath);
         System.out.println("\n\n\n*****************************Destination " + destPath);
         ZipFile zipFile = new ZipFile(sourcePath);
